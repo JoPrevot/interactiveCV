@@ -1,0 +1,33 @@
+.experience-container {
+  width: 98vw; // Prend toute la largeur de l'écran
+  max-width: 100%; // Évite toute restriction inutile
+  display: flex;
+  justify-content: center; // Centre le contenu si nécessaire
+}
+
+mat-accordion {
+  width: 90%;
+  max-width: 100%;
+}
+
+.mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-info {
+  display: flex;
+  padding-left: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 75px;
+  line-height: 1.75;
+}
+
+img {
+  width: 130px;
+  height: 100px;
+  object-fit: cover;
+}
+
+

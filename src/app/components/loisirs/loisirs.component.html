@@ -1,0 +1,26 @@
+<div class="loisirs-container">
+  <div
+    *ngFor="let loisir of loisirs"
+    class="loisir-card"
+    [class.selected]="selectedLoisir === loisir"
+    (click)="expandLoisir(loisir)"
+  >
+    <div class="loisir-icon">
+      <i class="material-icons">{{ loisir.icon }}</i>
+    </div>
+    <h3>{{ loisir.name }}</h3>
+  </div>
+
+  <!-- Carte agrandie, affichée seulement si une carte est sélectionnée -->
+  <div
+    class="loisir-card expanded"
+    *ngIf="selectedLoisir"
+    (click)="selectedLoisir = null"
+  >
+    <div class="loisir-icon">
+      <i class="material-icons">{{ selectedLoisir?.icon }}</i>
+    </div>
+    <h3>{{ selectedLoisir?.name }}</h3>
+    <p [innerHTML]="selectedLoisir?.description"></p>
+  </div>
+</div>

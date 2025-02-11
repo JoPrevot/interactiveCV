@@ -1,0 +1,15 @@
+
+<div class="cv-container">
+
+  <!-- Menu de navigation -->
+  <nav class="navigation">
+    <a routerLink="/about" routerLinkActive="active" class="nav-item" [routerLinkActiveOptions]="{exact: true}">A propos</a>
+    <a routerLink="/experiences" routerLinkActive="active" class="nav-item" [routerLinkActiveOptions]="{exact: true}">Expériences</a>
+    <a routerLink="/competences" routerLinkActive="active" class="nav-item" [routerLinkActiveOptions]="{exact: true}">Compétences</a>
+    <a routerLink="/formation" routerLinkActive="active" class="nav-item" [routerLinkActiveOptions]="{exact: true}">Formation</a>
+    <a routerLink="/loisirs" routerLinkActive="active" class="nav-item" [routerLinkActiveOptions]="{exact: true}">Loisirs</a>
+  </nav>
+  <div class="tab-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="timeline-container">
+  <div class="timeline-bar"></div>
+
+  <div class="timeline">
+    <div *ngFor="let formation of formations; let i = index" class="timeline-item">
+      <div
+        class="timeline-date"
+        [class.selected]="selectedIndex === i"
+        (click)="selectFormation(i)">
+        {{ formation.date }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteneur de la popup (fixe) -->
+  <div class="timeline-popup-container">
+    <div class="timeline-content">
+      <h3>{{ formations[selectedIndex].titre }}</h3>
+      <p [innerHTML]="formations[selectedIndex].universite"></p>
+      <p>{{ formations[selectedIndex].description }}</p>
+    </div>
+  </div>
+</div>
