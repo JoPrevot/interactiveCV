@@ -1,7 +1,8 @@
 <div class="timeline-container">
-  <div class="timeline-bar"></div>
 
+  <div class="timeline-bar"></div>
   <div class="timeline">
+
     <div *ngFor="let formation of formations; let i = index" class="timeline-item">
       <div
         class="timeline-date"
@@ -18,6 +19,7 @@
       <h3>{{ formations[selectedIndex].titre }}</h3>
       <p [innerHTML]="formations[selectedIndex].universite"></p>
       <p>{{ formations[selectedIndex].description }}</p>
+      <p><u>Points clés:</u> {{ formations[selectedIndex].competences }}</p>
     </div>
   </div>
 </div>

@@ -10,7 +10,7 @@
 .competences-section {
   position: fixed;
   top: 80px;
-  height: 80vh;
+  height: 85vh;
   width: 25%; // Taille réduite en état normal
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
@@ -24,7 +24,7 @@
 
   h2 {
     text-orientation: mixed;
-    font-size: 18px;
+    font-size: 1.3rem;
     margin: auto;
     transition: opacity 0.3s ease-in-out;
   }
@@ -49,15 +49,27 @@
     span {
       display: block;
       text-align: center;
-      font-size: 13px;
+      font-size: 1.4rem;
+      padding-bottom: 10px;
+      padding-top: 5px;
+      @media (max-width: 1290px) {
+        font-size: 0.9rem;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
     }
 
     .progress-bar {
       width: 100%;
-      height: 8px;
+      height: 15px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 4px;
       overflow: hidden;
+      position: relative;
+
+      @media (max-width: 1290px) {
+        height: 8px;
+      }
 
       .progress-fill {
         height: 100%;

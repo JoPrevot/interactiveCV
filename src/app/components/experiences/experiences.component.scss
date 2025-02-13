@@ -10,6 +10,13 @@ mat-accordion {
   max-width: 100%;
 }
 
+.mat-expansion-panel-header{
+  font-size: 1.1rem;
+  @media (max-width: 1290px) {
+    font-size: 0.9rem;
+  }
+}
+
 .mat-expansion-panel-header-description {
   justify-content: space-between;
   align-items: center;
@@ -18,15 +25,21 @@ mat-accordion {
 .project-info {
   display: flex;
   padding-left: 20px;
+  padding-top: 20px;
   justify-content: flex-start;
   align-items: center;
   gap: 75px;
   line-height: 1.75;
+  font-size: 1.3rem;
+  @media (max-width: 1290px) {
+    font-size: 0.9rem;
+    padding-top: 5px;
+  }
 }
 
 img {
-  width: 130px;
-  height: 100px;
+  width: 140%;
+  height: 15vh;
   object-fit: cover;
 }
 
