@@ -1,0 +1,39 @@
+<div class="competences-container">
+  <!-- Soft Skills -->
+  <div class="competences-section soft-skills">
+    <h2>Soft Skills</h2>
+    <div class="skills-list">
+      <div class="skills-wrapper">
+        <div *ngFor="let skill of competences.softSkills" class="skill">
+          <span>{{ skill.name }}</span>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hard Skills -->
+  <div class="competences-section hard-skills">
+    <h2>Hard Skills</h2>
+    <div class="skills-list">
+      <div class="skills-wrapper">
+        <div *ngFor="let skill of competences.hardSkills" class="skill">
+          <span>{{ skill.name }}</span>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-wrapper">
+        <div *ngFor="let skill of competences.hardSkillsBis" class="skill">
+          <span>{{ skill.name }}</span>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

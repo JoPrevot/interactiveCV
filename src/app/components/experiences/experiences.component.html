@@ -1,0 +1,22 @@
+<div class="experience-container">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let experience of experiences" (opened)="panelOpenState.set(true)"
+                         (closed)="panelOpenState.set(false)">
+      <mat-expansion-panel-header>
+        <mat-panel-title> {{experience.date}} </mat-panel-title>
+        <mat-panel-description> {{experience.titre}}
+        </mat-panel-description>
+        <mat-panel-description> {{experience.client}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="project-info">
+        <div class="profile-photo">
+          <img src="assets/picture/{{experience.image}}" alt="Modalis">
+        </div>
+        <div class="project-description">
+          <p [innerHTML]="experience.description"></p>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
