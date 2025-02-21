@@ -27,7 +27,7 @@ export class LoisirsComponent {
       name: 'Randonnée',
       description: '<strong>Top rando: </strong><a href="https://balades-naturalistes.fr/le-mont-humboldt/">Mont Humboldt - Nouvelle Calédonie</a><br>' +
         'Randonnées en bivouac sur plusieurs jours, GR.<br>' +
-        'Rien de mieux qu’une bonne rando pour souffler, se vider la tête et se challenger ! 🌿🏔️<br>'
+        '"La marche est le meilleur remède pour l’homme." 🌿🏔️<br>'
       ,
       icon: 'hiking'
     },

@@ -26,12 +26,12 @@ export class ExperiencesComponent {
       date: 'Septembre 2024 - Présent',
       client: 'Sopra Steria - NAM Modalis',
       image: 'modalis.png',
-      description: 'Sur un projet à l\'échelle régionale, j\'interviens actuellement en tant que <strong>responsable technique</strong> afin d\'assurer l\'aspect évolution technique et suivi qualité de l\'application.<br>' +
+      description: 'Sur un projet à l\'échelle régionale, j\'interviens actuellement en tant que <strong>référent technique</strong> afin d\'assurer l\'aspect évolution technique et suivi qualité de l\'application.<br>' +
         '- Rédaction et validation de <strong>devis technique</strong><br>' +
         '- Développpement, testing, déploiement<br>' +
         '- Assurance <strong>MCO</strong>, suivi et corrections des anomalies<br>' +
         '- <strong>Relation et communication</strong> inter-partenaires afin d\'assurer les liens entre APIS<br>' +
-        '<u>Environnement technique/fonctionnel:</u> Java 21 (Kotlin), Spring 3, Angular 19, MongoDB (NoSQL), Keycloak, Sendgrid, Azure (VM et CosmosDB), GitLab, Jira '
+        '<u>Environnement technique/fonctionnel:</u> Java 21 (Kotlin), Spring 3, Angular 19, MongoDB (NoSQL), Keycloak, Sendgrid, Azure (VM et CosmosDB), Kubernetes, GitLab, Jira '
     },
     {
       titre: 'Développeur Back-end',
