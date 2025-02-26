@@ -11,7 +11,7 @@
   position: fixed;
   top: 80px;
   height: 85vh;
-  width: 25%; // Taille réduite en état normal
+  width: 38.7%; // Taille réduite en état normal
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -21,6 +21,7 @@
   align-items: center;
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer; // Ajoute un effet interactif
 
   h2 {
     text-orientation: mixed;
@@ -41,19 +42,43 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
+    text-align: center;
+  }
+
+  .skills-wrapper-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    @media (max-width: 1290px) {
+      font-size: 0.9rem;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+
+  .skills-wrapper-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #194210;
+    margin-bottom: 10px;
+    margin-top: 5px;
+
   }
 
   .skill {
-    margin: 10px 0;
+    margin: 5px 0;
 
     span {
       display: block;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       padding-bottom: 10px;
       padding-top: 5px;
+
       @media (max-width: 1290px) {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         padding-bottom: 0;
         padding-top: 0;
       }
@@ -61,34 +86,62 @@
 
     .progress-bar {
       width: 100%;
-      height: 15px;
+      height: 10px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 4px;
       overflow: hidden;
       position: relative;
 
       @media (max-width: 1290px) {
-        height: 8px;
+        height: 6px;
       }
 
       .progress-fill {
         height: 100%;
         background: #4caf50;
         transition: width 0.3s ease-in-out;
+        position: relative;
+
+        &:hover {
+          background: #194210;
+        }
       }
+
     }
   }
 
   &:hover {
-    width: 70%; // Bandeau hoveré passe à 85% de la largeur
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  &.active {
+    width: 85%;
+
     .skills-list {
       display: block;
     }
 
     h2 {
-      opacity: 0; // Cache le titre
+      opacity: 0;
     }
   }
+
+  &.inactive {
+    width: 10%;
+    opacity: 0.6;
+    &:hover {
+      animation: jump 1s ease-in-out infinite;
+    }
+
+    @keyframes jump {
+      0% { transform: translateY(0); }
+      30% { transform: translateY(-10px); }
+      60% { transform: translateY(5px); }
+      100% { transform: translateY(0); }
+    }
+    }
+
 }
 
 .soft-skills {

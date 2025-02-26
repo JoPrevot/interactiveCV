@@ -43,7 +43,7 @@ export class FormationComponent implements OnInit {
       titre: 'Licence professionnelle Analyse, Contrôle et Expertise',
       universite: 'Université de Lille 1 - Villeneuve d\'Ascq',
       description: '',
-      competences: ''
+      competences: 'Méthodes d\'analyse'
     }
   ]
 

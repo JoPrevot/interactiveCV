@@ -11,31 +11,45 @@ import {NgForOf} from "@angular/common";
 export class CompetencesComponent {
   competences = {
     softSkills: [
-      {name: 'Esprit d\'équipe', level: 95},
-      {name: 'Communication', level: 90},
-      {name: 'Polyvalence', level: 87},
-      {name: 'Résolution de problèmes', level: 85},
-      {name: 'Suivi de la qualité', level: 83},
-      {name: 'Autonomie', level: 81},
-      {name: 'Résilience', level: 78},
-      {name: 'Force de proposition', level: 77}
+      {name: 'Esprit d\'équipe', level: 95, info: "Collaboration efficace et écoute active"},
+      {name: 'Communication', level: 90, info: "Capacité à transmettre des idées clairement"},
+      {name: 'Polyvalence', level: 87, info: "Adaptabilité rapide à différents contextes"},
+      {name: 'Résolution de problèmes', level: 85, info: "Analyse et approche méthodique des défis"},
+      {name: 'Suivi de la qualité', level: 83, info: "Sens du détail et amélioration continue"},
+      {name: 'Autonomie', level: 81, info: "Prise d’initiative et gestion indépendante du travail"},
+      {name: 'Résilience', level: 78, info: "Capacité à gérer la pression et rebondir face aux défis"},
+      {name: 'Force de proposition', level: 77, info: "Apport d'idées innovantes et optimisations"}
     ],
     hardSkills: [
-      {name: 'Java (8/17)', level: 90},
-      {name: 'Spring 3', level: 85},
-      {name: 'SQL', level: 85},
-      {name: 'Javascript & Angular 15+', level: 77},
-      {name: 'HTML & CSS', level: 68},
-      {name: 'MongoDB', level: 65},
-      {name: 'Flutter', level: 20}
+      {name: 'Java (8/17)', level: 90, info: "Développement backend avancé, API REST"},
+      {name: 'Spring 3', level: 85, info: "Spring Boot, Spring Data"},
+      {name: 'SQL', level: 85, info: "Optimisation des requêtes, PL/SQL, PostgreSQL, MySQL"},
+      {name: 'Javascript & Angular 15+', level: 77, info: "Développement front-end réactif et dynamique"},
+      {name: 'HTML & CSS', level: 68, info: "Mise en page responsive et design adaptatif"},
+      {name: 'MongoDB', level: 60, info: "Gestion de bases NoSQL, requêtes optimisées"},
+      {name: 'Flutter', level: 20, info: "Développement mobile cross-platform"}
     ],
     hardSkillsBis: [
-      {name: 'Testing (Mockito / JUnit / Xray)', level: 88},
-      {name: 'Git / Jira', level: 81},
-      {name: 'CI/CD', level: 30},
-      {name: 'Kubernetes', level: 15},
+      {name: 'Testing (JUnit / Mockito / Xray)', level: 88, info: "Tests unitaires et d’intégration automatisés"},
+      {name: 'Git / Jira', level: 81, info: "Gestion de version, workflows Agile/Scrum"},
+      {name: 'CI/CD', level: 30, info: "Automatisation des déploiements, GitLab CI"},
+      {name: 'Kubernetes', level: 15, info: "Orchestration de conteneurs"}
     ]
   };
+
+  selectedSection: string = '';
+  notSelectedSection: string = '';
+
+  selectSection(section: string) {
+    if (this.selectedSection == section) {
+      this.selectedSection = '';
+      return
+    }
+    this.selectedSection = section;
+    if (section === 'hard') {
+      this.notSelectedSection = 'soft';
+    }
+  }
 
 
 }
