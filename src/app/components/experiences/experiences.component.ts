@@ -69,7 +69,8 @@ export class ExperiencesComponent {
         '<strong>Gestion d’un projet</strong> de recherche de 4 ans à portée internationale.<br>' +
         '<strong>Autonomie</strong> de la veille scientifique jusqu’à la mise en place des essais et l’interprétation des résultats.<br>' +
         '<strong>Collaboration</strong> inter laboratoires, gestion de ressources et encadrement de stagiaires.<br>' +
-        '<strong>Communication scientifique</strong> à travers des articles, conférences et manuscrit de thèse (prix de la meilleure présentation aux doctoriales UNC 2019). Enseignements en classes supérieures et vulgarisation scientifiques.'
+        '<strong>Communication scientifique</strong> à travers des articles, conférences et manuscrit de thèse (prix de la meilleure présentation aux doctoriales UNC 2019). Enseignements en classes supérieures et vulgarisation scientifiques.<br>' +
+        '<br>Envie d\'en savoir plus ? ça se passe ici : <a href="https://www.youtube.com/watch?v=7pF01wbG2i4">soutenance de thèse</a> '
     }
     ,
     {

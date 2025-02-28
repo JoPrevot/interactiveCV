@@ -20,20 +20,29 @@ export class CompetencesComponent {
       {name: 'Résilience', level: 78, info: "Capacité à gérer la pression et rebondir face aux défis"},
       {name: 'Force de proposition', level: 77, info: "Apport d'idées innovantes et optimisations"}
     ],
-    hardSkills: [
-      {name: 'Java (8/17)', level: 90, info: "Développement backend avancé, API REST"},
+    backend: [
+      {name: 'Java (8/17)', level: 90, info: "Développement backend avancé"},
+      {name: 'Testing (JUnit / Mockito / Xray)', level: 88, info: "Tests unitaires et d’intégration automatisés"},
       {name: 'Spring 3', level: 85, info: "Spring Boot, Spring Data"},
-      {name: 'SQL', level: 85, info: "Optimisation des requêtes, PL/SQL, PostgreSQL, MySQL"},
-      {name: 'Javascript & Angular 15+', level: 77, info: "Développement front-end réactif et dynamique"},
-      {name: 'HTML & CSS', level: 68, info: "Mise en page responsive et design adaptatif"},
-      {name: 'MongoDB', level: 60, info: "Gestion de bases NoSQL, requêtes optimisées"},
+      {name: 'REST API', level: 80, info: "OpenAPI Specification, Swagger"},
+      {name: 'SOAP', level: 25, info: "Contrat d'interface XML"},
       {name: 'Flutter', level: 20, info: "Développement mobile cross-platform"}
     ],
-    hardSkillsBis: [
-      {name: 'Testing (JUnit / Mockito / Xray)', level: 88, info: "Tests unitaires et d’intégration automatisés"},
+
+    frontend: [
+      {name: 'Javascript & Angular 15+', level: 77, info: "Développement front-end réactif et dynamique"},
+      {name: 'HTML & CSS', level: 68, info: "Mise en page responsive et design adaptatif"}
+    ],
+
+    databases: [
+      {name: 'BDD SQL', level: 85, info: "Optimisation des requêtes, PL/SQL, PostgreSQL, MySQL, DBeaver"},
+      {name: 'BDD MongoDB', level: 60, info: "Gestion de bases NoSQL, liens avec CosmosDB"}
+    ],
+
+    tools: [
       {name: 'Git / Jira', level: 81, info: "Gestion de version, workflows Agile/Scrum"},
       {name: 'CI/CD', level: 30, info: "Automatisation des déploiements, GitLab CI"},
-      {name: 'Kubernetes', level: 15, info: "Orchestration de conteneurs"}
+      {name: 'Conteneurisation', level: 15, info: "Orchestration de conteneurs, Docker, Podman"}
     ]
   };
 

@@ -7,7 +7,7 @@
     (click)="selectSection('soft')"
   >
     <h2>Soft Skills</h2>
-    <div class="skills-list">
+    <div class="skills-list-soft">
       <div class="skills-wrapper">
         <div class="skills-wrapper-title">
           <span>SOFT SKILLS</span>
@@ -34,26 +34,52 @@
     <div class="skills-list">
       <div class="skills-wrapper">
         <div class="skills-wrapper-title">
-          <span>SKILLS TECHNIQUES</span>
+          <span>BACKEND</span>
         </div>
-        <div *ngFor="let skill of competences.hardSkills" class="skill">
+        <div *ngFor="let skill of competences.backend" class="skill">
           <span>{{ skill.name }}</span>
           <div class="progress-bar">
             <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
           </div>
         </div>
       </div>
+
       <div class="skills-wrapper">
         <div class="skills-wrapper-title">
-          <span>SKILLS TRANSVERSES</span>
+          <span>FRONTEND</span>
         </div>
-        <div *ngFor="let skill of competences.hardSkillsBis" class="skill">
+        <div *ngFor="let skill of competences.frontend" class="skill">
           <span>{{ skill.name }}</span>
           <div class="progress-bar">
             <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
           </div>
         </div>
       </div>
+
+      <div class="skills-wrapper">
+        <div class="skills-wrapper-title">
+          <span>GESTION DE DONNEES</span>
+        </div>
+        <div *ngFor="let skill of competences.databases" class="skill">
+          <span>{{ skill.name }}</span>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-wrapper">
+        <div class="skills-wrapper-title">
+          <span>OUTILS</span>
+        </div>
+        <div *ngFor="let skill of competences.tools" class="skill">
+          <span>{{ skill.name }}</span>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
