@@ -1,85 +1,80 @@
 <div class="competences-container">
-  <!-- Soft Skills -->
-  <div
-    class="competences-section soft-skills"
-    [class.active]="selectedSection === 'soft'"
-    [class.inactive]="selectedSection === 'hard'"
-    (click)="selectSection('soft')"
-  >
-    <h2>Soft Skills</h2>
-    <div class="skills-list-soft">
-      <div class="skills-wrapper">
-        <div class="skills-wrapper-title">
-          <span>SOFT SKILLS</span>
-        </div>
-        <div *ngFor="let skill of competences.softSkills" class="skill">
-          <span>{{ skill.name }}</span>
-          <div class="progress-bar">
-            <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
-          </div>
+  <!-- Switch Soft/Hard Skills -->
+  <div class="skills-switch">
+    <button
+      class="switch-button"
+      [class.active]="showSoftSkills"
+      (click)="toggleSkillType(true)"
+    >
+      Soft Skills
+    </button>
+    <button
+      class="switch-button"
+      [class.active]="!showSoftSkills"
+      (click)="toggleSkillType(false)"
+    >
+      Hard Skills
+    </button>
+  </div>
 
+  <!-- Soft Skills -->
+  <div class="skills-section" *ngIf="showSoftSkills">
+    <div class="skills-grid">
+      <div *ngFor="let skill of competences.softSkills" class="skill-item">
+        <span class="skill-name">{{ skill.name }}</span>
+        <div class="progress-bar">
+          <div
+            class="progress-fill"
+            [style.width.%]="skill.level"
+            [title]="skill.info ? skill.info : skill.level + '%'"
+          ></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Hard Skills -->
-  <div
-    class="competences-section hard-skills"
-    [class.active]="selectedSection === 'hard'"
-    [class.inactive]="selectedSection === 'soft'"
-    (click)="selectSection('hard')"
-  >
-    <h2>Hard Skills</h2>
-    <div class="skills-list">
-      <div class="skills-wrapper">
-        <div class="skills-wrapper-title">
-          <span>BACKEND</span>
-        </div>
-        <div *ngFor="let skill of competences.backend" class="skill">
-          <span>{{ skill.name }}</span>
+  <!-- Hard Skills avec Carrousel -->
+  <div class="skills-section" *ngIf="!showSoftSkills">
+    
+    <!-- Navigation du carrousel -->
+    <div class="carousel-navigation">
+      <button class="nav-arrow left" (click)="previousCategory()">◀</button>
+
+      <div class="category-title">
+        {{ hardSkillsCategories[currentCategoryIndex].title }}
+      </div>
+
+      <button class="nav-arrow right" (click)="nextCategory()">▶</button>
+    </div>
+
+    <!-- Indicateurs -->
+    <div class="carousel-indicators">
+      <span
+        *ngFor="let category of hardSkillsCategories; let i = index"
+        class="indicator"
+        [class.active]="i === currentCategoryIndex"
+        (click)="goToCategory(i)"
+      >
+      </span>
+    </div>
+
+    <!-- Contenu du carrousel -->
+    <div class="carousel-content">
+      <div class="skills-grid">
+        <div
+          *ngFor="let skill of getCurrentCategorySkills()"
+          class="skill-item"
+        >
+          <span class="skill-name">{{ skill.name }}</span>
           <div class="progress-bar">
-            <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
+            <div
+              class="progress-fill"
+              [style.width.%]="skill.level"
+              [title]="skill.info ? skill.info : skill.level + '%'"
+            ></div>
           </div>
         </div>
       </div>
-
-      <div class="skills-wrapper">
-        <div class="skills-wrapper-title">
-          <span>FRONTEND</span>
-        </div>
-        <div *ngFor="let skill of competences.frontend" class="skill">
-          <span>{{ skill.name }}</span>
-          <div class="progress-bar">
-            <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-wrapper">
-        <div class="skills-wrapper-title">
-          <span>GESTION DE DONNEES</span>
-        </div>
-        <div *ngFor="let skill of competences.databases" class="skill">
-          <span>{{ skill.name }}</span>
-          <div class="progress-bar">
-            <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-wrapper">
-        <div class="skills-wrapper-title">
-          <span>OUTILS</span>
-        </div>
-        <div *ngFor="let skill of competences.tools" class="skill">
-          <span>{{ skill.name }}</span>
-          <div class="progress-bar">
-            <div class="progress-fill" [style.width.%]="skill.level" [title]="skill.info ? skill.info : skill.level + '%'"></div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>

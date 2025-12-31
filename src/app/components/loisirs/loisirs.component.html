@@ -11,6 +11,13 @@
     <h3>{{ loisir.name }}</h3>
   </div>
 
+  <!-- Backdrop avec blur -->
+  <div
+    class="backdrop"
+    *ngIf="selectedLoisir"
+    (click)="selectedLoisir = null"
+  ></div>
+
   <!-- Carte agrandie, affichée seulement si une carte est sélectionnée -->
   <div
     class="loisir-card expanded"

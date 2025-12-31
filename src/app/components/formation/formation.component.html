@@ -1,25 +1,44 @@
 <div class="timeline-container">
-
   <div class="timeline-bar"></div>
   <div class="timeline">
-
-    <div *ngFor="let formation of formations; let i = index" class="timeline-item">
+    <div
+      *ngFor="let formation of formations; let i = index"
+      class="timeline-item"
+    >
       <div
         class="timeline-date"
         [class.selected]="selectedIndex === i"
-        (click)="selectFormation(i)">
+        (click)="scrollToFormation(i)"
+      >
         {{ formation.date }}
       </div>
     </div>
   </div>
 
-  <!-- Conteneur de la popup (fixe) -->
+  <!-- Conteneur scrollable -->
   <div class="timeline-popup-container">
-    <div class="timeline-content">
-      <h3>{{ formations[selectedIndex].titre }}</h3>
-      <p [innerHTML]="formations[selectedIndex].universite"></p>
-      <p>{{ formations[selectedIndex].description }}</p>
-      <p><u>Points clés:</u> {{ formations[selectedIndex].competences }}</p>
+    <div
+      class="timeline-content-wrapper"
+      (scroll)="onScroll($event)"
+      #scrollContainer
+    >
+      <div
+        *ngFor="let formation of formations; let i = index"
+        class="timeline-content"
+      >
+        <h3>{{ formation.titre }}</h3>
+        <p [innerHTML]="formation.universite"></p>
+        <p>{{ formation.description }}</p>
+        <p><u>Points clés:</u> {{ formation.competences }}</p>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span
+        *ngFor="let formation of formations; let i = index"
+        [class.active]="selectedIndex === i"
+        (click)="scrollToFormation(i)"
+      >
+      </span>
     </div>
   </div>
 </div>
