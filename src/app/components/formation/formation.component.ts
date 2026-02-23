@@ -15,6 +15,15 @@ export class FormationComponent implements OnInit {
 
   formations = [
     {
+      date: '2026',
+      titre: 'Certification SAFe Scrum Master',
+      universite: 'Scaled Agile, Inc.',
+      description:
+        'Certification SAFe Scrum Master validant la maîtrise du cadre SAFe et du rôle de Scrum Master à l’échelle.',
+      competences:
+        'Animation des cérémonies Agile, facilitation d’équipes, amélioration continue, coordination dans un train Agile (ART).',
+    },
+    {
       date: '2022',
       titre: 'POEI Java Full Stack',
       universite: 'M2I Formation & Sopra Steria Group',
@@ -41,13 +50,6 @@ export class FormationComponent implements OnInit {
         'Master effectué en apprentissage au centre de R&D de Vallourec.',
       competences:
         'Chimie, Recherche et Développement, Analyse de données, Gestion de projet.',
-    },
-    {
-      date: '2013 - 2014',
-      titre: 'Licence professionnelle Analyse, Contrôle et Expertise',
-      universite: "Université de Lille 1 - Villeneuve d'Ascq",
-      description: '',
-      competences: "Méthodes d'analyse",
     },
   ];
 

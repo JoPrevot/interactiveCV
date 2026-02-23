@@ -29,17 +29,22 @@ export class CompetencesComponent {
       {
         name: 'Résolution de problèmes',
         level: 85,
-        info: 'Analyse et approche méthodique des défis',
+        info: 'Analyse, modélisation et approche méthodique des défis complexes',
       },
       {
         name: 'Suivi de la qualité',
         level: 83,
-        info: 'Sens du détail et amélioration continue',
+        info: 'Sens du détail, amélioration continue, démarche TDD',
+      },
+      {
+        name: 'Leadership Agile / Scrum',
+        level: 82,
+        info: "Animation des cérémonies, accompagnement de l'équipe, facilitation",
       },
       {
         name: 'Autonomie',
         level: 81,
-        info: 'Prise d’initiative et gestion indépendante du travail',
+        info: 'Prise d’initiative, gestion indépendante du travail et du planning',
       },
       {
         name: 'Résilience',
@@ -56,16 +61,30 @@ export class CompetencesComponent {
       {
         name: 'Java (8/17/21)',
         level: 90,
-        info: 'Développement backend avancé',
+        info: 'Développement backend avancé, microservices, bonnes pratiques',
       },
       {
-        name: 'Testing (JUnit / Mockito / Xray)',
+        name: 'Testing (JUnit / Mockito)',
         level: 88,
-        info: 'Tests unitaires et d’intégration automatisés',
+        info: 'Tests unitaires et d’intégration automatisés, approche TDD',
       },
-      { name: 'Spring 3', level: 85, info: 'Spring Boot, Spring Data' },
+      {
+        name: 'Spring 3+',
+        level: 85,
+        info: 'Spring Boot, Spring Data, Spring Security',
+      },
       { name: 'REST API', level: 80, info: 'OpenAPI Specification, Swagger' },
-      { name: 'SOAP', level: 25, info: "Contrat d'interface XML" },
+      {
+        name: 'Architecture microservices',
+        level: 75,
+        info: 'Conception, communication inter-services, résilience',
+      },
+      {
+        name: 'Sécurité / Authentification (Keycloak)',
+        level: 70,
+        info: 'Gestion des accès (OAuth2 / OIDC)',
+      },
+      { name: 'SOAP', level: 40, info: "Contrat d'interface XML" },
       {
         name: 'Flutter',
         level: 20,
@@ -76,8 +95,8 @@ export class CompetencesComponent {
     frontend: [
       {
         name: 'Javascript & Angular 18+',
-        level: 77,
-        info: 'Développement front-end réactif et dynamique',
+        level: 80,
+        info: 'Développement front-end réactif, dynamique et maintenable',
       },
       {
         name: 'HTML & CSS',
@@ -107,28 +126,61 @@ export class CompetencesComponent {
         level: 60,
         info: 'Gestion de bases NoSQL, liens avec CosmosDB',
       },
+      {
+        name: 'Firestore',
+        level: 20,
+        info: 'Gestion de bases NoSQL dans le cloud, intégration avec Flutter',
+      },
+    ],
+
+    devops: [
+      {
+        name: 'Azure VM',
+        level: 40,
+        info: 'Création et gestion de machines virtuelles Azure',
+      },
+      {
+        name: 'CI/CD',
+        level: 35,
+        info: 'Automatisation des déploiements, GitLab CI',
+      },
+      {
+        name: 'Conteneurisation (Docker / Podman)',
+        level: 25,
+        info: 'Création et exécution de conteneurs, Docker, Podman',
+      },
     ],
 
     tools: [
       {
+        name: 'IntelliJ IDEA Ultimate / VS Code',
+        level: 85,
+        info: 'IDE principal pour le développement Java / Spring et front-end',
+      },
+      {
         name: 'Git / GitKraken',
-        level: 81,
+        level: 83,
         info: 'Gestion de version, branches, merges',
       },
       {
         name: 'Jira',
         level: 80,
-        info: 'Workflows Agile/Scrum, Ticketing',
+        info: 'Workflows Agile/Scrum, suivi d’incréments et de releases',
       },
       {
-        name: 'CI/CD',
-        level: 30,
-        info: 'Automatisation des déploiements, GitLab CI',
+        name: 'Postman / Insomnia',
+        level: 80,
+        info: 'Tests et documentation d’API REST',
       },
       {
-        name: 'Conteneurisation',
-        level: 15,
-        info: 'Orchestration de conteneurs, Docker, Podman',
+        name: 'Scrum / SAFe',
+        level: 78,
+        info: 'Scrum Master certifié SAFe, pilotage Agile multi-équipes',
+      },
+      {
+        name: 'SonarQube',
+        level: 60,
+        info: 'Analyse de la qualité de code, dette technique, couverture',
       },
     ],
   };
@@ -142,6 +194,7 @@ export class CompetencesComponent {
     { key: 'backend', title: 'Backend' },
     { key: 'frontend', title: 'Frontend' },
     { key: 'databases', title: 'Gestion de Données' },
+    { key: 'devops', title: 'DevOps / Cloud' },
     { key: 'tools', title: 'Outils' },
   ];
 
