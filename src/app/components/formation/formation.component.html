@@ -1,18 +1,17 @@
 <div class="timeline-container">
   <div class="timeline-bar"></div>
   <div class="timeline">
-    <div
-      *ngFor="let formation of formations; let i = index"
-      class="timeline-item"
-    >
-      <div
-        class="timeline-date"
-        [class.selected]="selectedIndex === i"
-        (click)="scrollToFormation(i)"
-      >
-        {{ formation.date }}
+    @for (formation of formations; track formation.date; let i = $index) {
+      <div class="timeline-item">
+        <div
+          class="timeline-date"
+          [class.selected]="selectedIndex === i"
+          (click)="scrollToFormation(i)"
+        >
+          {{ formation.date }}
+        </div>
       </div>
-    </div>
+    }
   </div>
 
   <!-- Conteneur scrollable -->
@@ -22,23 +21,28 @@
       (scroll)="onScroll($event)"
       #scrollContainer
     >
-      <div
-        *ngFor="let formation of formations; let i = index"
-        class="timeline-content"
-      >
-        <h3>{{ formation.titre }}</h3>
-        <p [innerHTML]="formation.universite"></p>
-        <p>{{ formation.description }}</p>
-        <p><u>Points clés:</u> {{ formation.competences }}</p>
-      </div>
+      @for (formation of formations; track formation.titre; let i = $index) {
+        <div class="timeline-content">
+          <h3>{{ formation.titre }}</h3>
+          <p class="card-universite">
+            <mat-icon>school</mat-icon>
+            <span [innerHTML]="formation.universite"></span>
+          </p>
+          <p class="card-description">{{ formation.description }}</p>
+          <div class="card-competences">
+            <mat-icon>psychology</mat-icon>
+            <span>{{ formation.competences }}</span>
+          </div>
+        </div>
+      }
     </div>
     <div class="scroll-indicator">
-      <span
-        *ngFor="let formation of formations; let i = index"
-        [class.active]="selectedIndex === i"
-        (click)="scrollToFormation(i)"
-      >
-      </span>
+      @for (formation of formations; track formation.date; let i = $index) {
+        <span
+          [class.active]="selectedIndex === i"
+          (click)="scrollToFormation(i)"
+        ></span>
+      }
     </div>
   </div>
 </div>

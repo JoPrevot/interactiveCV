@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { NgForOf } from '@angular/common';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-formation',
   standalone: true,
-  imports: [NgForOf],
+  imports: [MatIcon],
   templateUrl: './formation.component.html',
   styleUrl: './formation.component.scss',
 })
@@ -36,7 +36,7 @@ export class FormationComponent implements OnInit {
       date: '2016 - 2020',
       titre: 'Doctorat en chimie des Matériaux',
       universite:
-        'Université de Nouvelle-Calédonie <br>Institut des Sciences Exactes et Appliquées - Nouméa',
+        'Institut des Sciences Exactes et Appliquées - Nouméa',
       description:
         'Thèse scientifique menée en laboratoire (Nouméa et La Rochelle) via un financement ministériel.',
       competences:
